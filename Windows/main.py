@@ -8,7 +8,7 @@ class App:
     def __init__(self, root):
         self.count = 0
         #setting title
-        root.title("Lick_it")
+        root.title("ToolForAndroidDevs")
         #setting window size
         width=600
         height=500
