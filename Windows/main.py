@@ -183,15 +183,32 @@ class App:
         print(ss)
 
 
+#     def GButton_833_command(self):
+#         data=str(self.GLineEdit_971.get())
+#         # replace white space with % in string
+#         data = data.replace(" ", "%s")
+#         data = "adb shell input text "+data
+#         print(data)
+#         ss=os.system(data)
+#         # print(ss)
+          
+    
     def GButton_833_command(self):
         data=str(self.GLineEdit_971.get())
-        # replace white space with % in string
-        data = data.replace(" ", "%s")
-        data = "adb shell input text "+data
-        print(data)
-        ss=os.system(data)
-        # print(ss)
-          
+        if data.lower() == "scrcpy":
+            dir = os.getcwd()
+            dir = "cd "+dir
+            os.system(dir)
+            os.system("cd scrpy")
+            os.system("chdir")
+            os.startfile("scrcpy.exe")
+        else:
+            data = data.replace(" ", "%s")
+            data = "adb shell input text "+data
+            print(data)
+            ss=os.system(data)
+            
+            
     def GButton_15_command(self):
         ss=os.system("adb shell input keyevent SLEEP")
         print(ss)
